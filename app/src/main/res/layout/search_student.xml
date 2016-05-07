@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#cddc39"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/rollSearchET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"/>
+    <Button
+        android:id="@+id/searchBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:background="#827717"
+        android:textColor="#bd000000"
+        android:layout_marginRight="16dp"
+        android:onClick="searchBTN"
+        android:layout_gravity="right"/>
+    <TextView
+        android:id="@+id/nameShowTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:text="Name"/>
+    <TextView
+        android:id="@+id/phnShowTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:text="Phone"/>
+    <Button
+        android:id="@+id/updateBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#827717"
+        android:textColor="#bd000000"
+        android:onClick="updateBTN"
+        android:layout_marginTop="16dp"
+        android:text="Update"/>
+    <Button
+        android:id="@+id/deleteBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#827717"
+        android:textColor="#bd000000"
+        android:onClick="deleteBTN"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Delete"/>
+
+
+</LinearLayout>

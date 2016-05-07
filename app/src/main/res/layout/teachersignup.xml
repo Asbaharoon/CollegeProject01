@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cddc39"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Your Information"
+        android:layout_gravity="center_horizontal"
+        android:textSize="36sp"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Name"
+        android:layout_marginTop="10dp"
+        android:ems="25"
+        android:layout_gravity="center_horizontal"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/teacherid"
+        android:layout_marginTop="10dp"
+        android:hint="Id"
+        android:ems="15"
+        android:layout_gravity="center_horizontal"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="SignUp"
+        android:background="#827717"
+        android:textColor="#bd000000"
+        android:textStyle="bold"
+        android:onClick="signUp"
+        android:layout_gravity="center_horizontal"/>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#cddc39"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/attendenceBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Attendence"
+        android:background="#827717"
+        android:textColor="#bd000000"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="attendenceBTN"/>
+    <Button
+        android:id="@+id/addStudentBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="addStudentBTN"
+        android:background="#827717"
+        android:textColor="#bd000000"
+        android:textStyle="bold"
+        android:text="Add Student"/>
+
+    <Button
+        android:id="@+id/reportBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="reportBTN"
+        android:background="#827717"
+        android:textColor="#bd000000"
+        android:textStyle="bold"
+        android:text="Report"/>
+
+    <Button
+        android:id="@+id/searchStudentBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="searchStudentBTN"
+        android:background="#827717"
+        android:textColor="#bd000000"
+        android:textStyle="bold"
+        android:text="Search"/>
+
+</LinearLayout>
