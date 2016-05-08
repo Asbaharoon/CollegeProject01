@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -28,7 +28,8 @@ public class StudentListDataAdapter extends ArrayAdapter {
     SQLiteDatabase sqLiteDatabase;
     StudentReportProvider studentReportProvider;
     SettingsActivity settingsActivity;
-    private static SharedPreferences sharedPreferences, sharedPreference;
+    private static SharedPreferences sharedPreferences;
+
 
     public StudentListDataAdapter(Context context, int resource) {
         super(context, resource);
@@ -57,6 +58,9 @@ public class StudentListDataAdapter extends ArrayAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
+
+
 
 
         View row = convertView;
@@ -103,11 +107,14 @@ public class StudentListDataAdapter extends ArrayAdapter {
 
 
                 Toast.makeText(getContext(), studentDataProvider.getMob(), Toast.LENGTH_SHORT).show();
-                String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-                studentReportProvider = new StudentReportProvider(studentDataProvider.getRoll(), date, "Absent");
+                Calendar c = Calendar.getInstance();
+                SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                String date = df.format(c.getTime());
+                //String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+                studentReportProvider = new StudentReportProvider(studentDataProvider.getName(), studentDataProvider.getRoll(), date, "Absent");
                 dataBaseHelper = new DataBaseHelper(getContext());
                 sqLiteDatabase = dataBaseHelper.getWritableDatabase();
-                dataBaseHelper.addStudentReport(studentDataProvider.getRoll(), date, "Present", sqLiteDatabase);
+                dataBaseHelper.addStudentReport(studentDataProvider.getName(), studentDataProvider.getRoll(), date, "Present", sqLiteDatabase);
                 dataBaseHelper.close();
             }
         });
@@ -118,17 +125,20 @@ public class StudentListDataAdapter extends ArrayAdapter {
             public void onClick(View v) {
 
                 if (sharedPreferences.getBoolean("AbsentSMSon", false)){
-                    //sendMsg(studentDataProvider.getMob(), "Absent Today");
+                    sendMsg(studentDataProvider.getMob(), "Absent Today");
                     Toast.makeText(getContext(),"MESSEGE 2 SEND", Toast.LENGTH_SHORT).show();
                 }
 
 
-                    Toast.makeText(getContext(), studentDataProvider.getMob(), Toast.LENGTH_SHORT).show();
-                String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-                studentReportProvider = new StudentReportProvider(studentDataProvider.getRoll(), date, "Absent");
+                Toast.makeText(getContext(), studentDataProvider.getMob(), Toast.LENGTH_SHORT).show();
+                //String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+                Calendar c = Calendar.getInstance();
+                SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                String date2 = df.format(c.getTime());
+                studentReportProvider = new StudentReportProvider(studentDataProvider.getName(),studentDataProvider.getRoll(), date2, "Absent");
                 dataBaseHelper = new DataBaseHelper(getContext());
                 sqLiteDatabase = dataBaseHelper.getWritableDatabase();
-                dataBaseHelper.addStudentReport(studentDataProvider.getRoll(), date, "Absent", sqLiteDatabase);
+                dataBaseHelper.addStudentReport(studentDataProvider.getName(), studentDataProvider.getRoll(), date2, "Absent", sqLiteDatabase);
                 dataBaseHelper.close();
             }
         });

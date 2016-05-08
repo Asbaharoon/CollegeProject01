@@ -7,7 +7,8 @@ public class StudentReport {
     public static abstract class StudentReportData {
         public static final String STUDENT_IDS = "student_ids";
         public static final String STUDENT_VERDICT = "verdict_today";
-        public static final String CURRENT_DATE = "date_today";
+        public static final String CURRENT_DATE = "date_time";
+        public static final String STUDENT_NAME = "student_name";
         public static final String STUDENT_REPORT_TABEL_NAME = "student_report";
     }
 

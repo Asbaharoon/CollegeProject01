@@ -20,10 +20,10 @@ import java.nio.channels.FileChannel;
 public class DataBaseHelper extends SQLiteOpenHelper {
 
     private static final String STUDENT_INFO_DATABASE_NAME = "USERINFO.DB";
-    private static final int STUDENT_INFO_DATABASE_VERSION = 2;
+    private static final int STUDENT_INFO_DATABASE_VERSION = 3;
     private static final String STUDENT_INFO_CREATE_QUERY = "CREATE TABLE "+ StudentInfo.NewUserInfo.STUDENT_INFO_TABEL_NAME +"("+ StudentInfo.NewUserInfo.STUDENT_NAME+" TEXT,"+ StudentInfo.NewUserInfo.STUDENT_ROLL +" TEXT,"+ StudentInfo.NewUserInfo.STUDENT_MOB +" TEXT);";
 
-    private static final String STUDENT_REPORT_CREATE_QUERY = "CREATE TABLE "+ StudentReport.StudentReportData.STUDENT_REPORT_TABEL_NAME +"("+ StudentReport.StudentReportData.STUDENT_IDS+" TEXT,"+ StudentReport.StudentReportData.CURRENT_DATE +" TEXT,"+ StudentReport.StudentReportData.STUDENT_VERDICT +" TEXT);";
+    private static final String STUDENT_REPORT_CREATE_QUERY = "CREATE TABLE "+ StudentReport.StudentReportData.STUDENT_REPORT_TABEL_NAME +"("+ StudentReport.StudentReportData.STUDENT_NAME+" TEXT,"+ StudentReport.StudentReportData.STUDENT_IDS+" TEXT,"+ StudentReport.StudentReportData.CURRENT_DATE +" TEXT,"+ StudentReport.StudentReportData.STUDENT_VERDICT +" TEXT);";
 
 
 
@@ -62,8 +62,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public void addStudentReport(String id, String date, String verdict, SQLiteDatabase db){
+    public void addStudentReport(String name, String id, String date, String verdict, SQLiteDatabase db){
         ContentValues contentValues = new ContentValues();
+        contentValues.put(StudentReport.StudentReportData.STUDENT_NAME, name);
         contentValues.put(StudentReport.StudentReportData.STUDENT_IDS, id);
         contentValues.put(StudentReport.StudentReportData.CURRENT_DATE, date);
         contentValues.put(StudentReport.StudentReportData.STUDENT_VERDICT, verdict);
@@ -73,7 +74,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     public Cursor getStudentReport(SQLiteDatabase db){
         Cursor cursor;
-        String[] projection = {StudentReport.StudentReportData.STUDENT_IDS, StudentReport.StudentReportData.CURRENT_DATE, StudentReport.StudentReportData.STUDENT_VERDICT};
+        String[] projection = {StudentReport.StudentReportData.STUDENT_NAME, StudentReport.StudentReportData.STUDENT_IDS, StudentReport.StudentReportData.CURRENT_DATE, StudentReport.StudentReportData.STUDENT_VERDICT};
 
         cursor = db.query(StudentReport.StudentReportData.STUDENT_REPORT_TABEL_NAME, projection, null, null, null, null, null);
         return cursor;

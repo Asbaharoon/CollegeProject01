@@ -8,6 +8,15 @@ public class StudentReportProvider {
     private String date;
     private String verdict;
     private String smsOnOff;
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getSmsOnOff() {
         return smsOnOff;
@@ -17,7 +26,8 @@ public class StudentReportProvider {
         this.smsOnOff = smsOnOff;
     }
 
-    public StudentReportProvider(String ids, String date, String verdict) {
+    public StudentReportProvider(String name, String ids, String date, String verdict) {
+        this.name = name;
         this.ids = ids;
         this.date = date;
         this.verdict = verdict;

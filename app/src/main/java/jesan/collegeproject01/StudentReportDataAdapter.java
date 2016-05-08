@@ -21,7 +21,7 @@ public class StudentReportDataAdapter extends ArrayAdapter {
     }
 
     static class LayoutHandler{
-        TextView idTV, dateTV, verdictTV;
+        TextView nameRTV, idTV, dateTV, verdictTV;
 
     }
 
@@ -48,6 +48,7 @@ public class StudentReportDataAdapter extends ArrayAdapter {
             LayoutInflater layoutInflater = (LayoutInflater) this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row = layoutInflater.inflate(R.layout.row_list_student_report, parent, false);
             layoutHandler = new LayoutHandler();
+            layoutHandler.nameRTV = (TextView) row.findViewById(R.id.nameRTV);
             layoutHandler.idTV = (TextView) row.findViewById(R.id.idTV);
             layoutHandler.dateTV = (TextView) row.findViewById(R.id.dateTV);
             layoutHandler.verdictTV = (TextView) row.findViewById(R.id.verdictTV);
@@ -62,6 +63,7 @@ public class StudentReportDataAdapter extends ArrayAdapter {
         }
 
         final StudentReportProvider studentReportProvider = (StudentReportProvider) this.getItem(position);
+        layoutHandler.nameRTV.setText(studentReportProvider.getName());
         layoutHandler.idTV.setText(studentReportProvider.getIds());
         layoutHandler.dateTV.setText(studentReportProvider.getDate());
         layoutHandler.verdictTV.setText(studentReportProvider.getVerdict());

@@ -5,6 +5,13 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/nameRTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="name"/>
+
+    <TextView
         android:id="@+id/idTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -14,7 +21,7 @@
         android:layout_marginLeft="95dp"
         android:id="@+id/dateTV"
         android:layout_width="0dp"
-        android:layout_weight="3"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:text="date"/>
     <TextView

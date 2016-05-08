@@ -43,12 +43,13 @@ public class StudentReportListActivity extends AppCompatActivity {
         cursor = dataBaseHelper.getStudentReport(sqLiteDatabase);
         if (cursor.moveToNext()){
             do {
-                String id, date, roll;
-                id = cursor.getString(0);
-                date = cursor.getString(1);
-                roll = cursor.getString(2);
+                String name, id, date, roll;
+                name = cursor.getString(0);
+                id = cursor.getString(1);
+                date = cursor.getString(2);
+                roll = cursor.getString(3);
 
-                StudentReportProvider studentReportProvider = new StudentReportProvider(id, date, roll);
+                StudentReportProvider studentReportProvider = new StudentReportProvider(name, id, date, roll);
                 studentReportDataAdapter.add(studentReportProvider);
 
             }while (cursor.moveToNext());
