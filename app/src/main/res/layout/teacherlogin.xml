@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:id="@+id/teacherLogin"
+        android:id="@+id/teacherId"
         android:hint="Enter Id"/>
     <Button
         android:layout_width="match_parent"

@@ -5,6 +5,114 @@
     android:orientation="vertical"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/welcom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attendence Report"
+        android:textSize="25sp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/nameTTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textSize="17sp"
+            android:text="Name : "/>
+        <TextView
+            android:id="@+id/nameteacherTV"
+            android:layout_toRightOf="@id/nameTTV"
+            android:layout_alignBaseline="@id/nameTTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_marginLeft="4dp"
+            android:text="name"/>
+        <TextView
+            android:id="@+id/idTTV"
+            android:layout_toRightOf="@id/nameteacherTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textSize="17sp"
+            android:text="ID : "/>
+
+        <TextView
+            android:id="@+id/idteacherTV"
+            android:layout_toRightOf="@id/idTTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_marginLeft="4dp"
+            android:text="id"/>
+        <TextView
+            android:id="@+id/classTTV"
+            android:layout_below="@id/idTTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textSize="17sp"
+            android:text="Class : "/>
+        <TextView
+            android:id="@+id/classteacherTV"
+            android:layout_alignBaseline="@id/classTTV"
+            android:layout_toRightOf="@id/classTTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_marginLeft="4dp"
+            android:text="class"/>
+        <TextView
+            android:id="@+id/secTTV"
+            android:layout_alignBaseline="@id/classteacherTV"
+            android:layout_toRightOf="@id/classteacherTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textSize="17sp"
+            android:text="Section :"/>
+
+
+        <TextView
+            android:id="@+id/secteacherTV"
+            android:layout_alignBaseline="@id/secTTV"
+            android:layout_toRightOf="@id/secTTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:textSize="17sp"
+            android:text="sec"/>
+        <TextView
+            android:id="@+id/subTTV"
+            android:layout_alignBaseline="@id/secteacherTV"
+            android:layout_toRightOf="@id/secteacherTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textSize="17sp"
+            android:text="Subject :"/>
+        <TextView
+            android:id="@+id/subteacherTV"
+            android:layout_alignBaseline="@id/subTTV"
+            android:layout_toRightOf="@id/subTTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_marginLeft="4dp"
+            android:text="sub"/>
+
+
+
+    </RelativeLayout>
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,6 +151,8 @@
         android:layout_below="@id/space"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/report_list_view"></ListView>
+        android:id="@+id/report_list_view">
+
+    </ListView>
 
 </LinearLayout>

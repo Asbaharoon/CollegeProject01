@@ -1,26 +1,45 @@
 package jesan.collegeproject01;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private SharedPreferences sharedPreferences;
+    EditText teacherId;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.teacherlogin);
+        teacherId = (EditText) findViewById(R.id.teacherId);
+        sharedPreferences = getSharedPreferences("jesan.collegeproject01.SIGNUP", MODE_PRIVATE);
 
     }
 
     public void loginBTN(View view){
-        Intent intent = new Intent(getApplicationContext(), FeatureWork.class);
-        startActivity(intent);
+
+        String id1 = sharedPreferences.getString("ID", "");
+        String id2 = teacherId.getText().toString();
+
+        if (id1.equals(id2)){
+            Intent intent = new Intent(getApplicationContext(), FeatureWork.class);
+            startActivity(intent);
+        }else {
+            Toast.makeText(getApplicationContext(), "ID doesn't match", Toast.LENGTH_SHORT).show();
+        }
+
+
+
+
     }
 
 
