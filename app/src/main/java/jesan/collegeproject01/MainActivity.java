@@ -8,12 +8,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private SharedPreferences sharedPreferences;
     EditText teacherId;
+    TextView signBTN;
 
 
     @Override
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.teacherlogin);
         teacherId = (EditText) findViewById(R.id.teacherId);
+        signBTN = (TextView) findViewById(R.id.signBTN);
         sharedPreferences = getSharedPreferences("jesan.collegeproject01.SIGNUP", MODE_PRIVATE);
 
     }

@@ -4,11 +4,32 @@
     android:background="#cddc39"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#bd000000"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:text="Log In"/>
+
     <EditText
+        android:id="@+id/teacherId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:id="@+id/teacherId"
+        android:layout_marginTop="8dp"
+        android:ems="10"
         android:hint="Enter Id"/>
     <Button
         android:layout_width="match_parent"
@@ -16,6 +37,7 @@
         android:id="@+id/loginBTN"
         android:background="#827717"
         android:textColor="#bd000000"
+        android:layout_marginTop="8dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:textStyle="bold"
@@ -24,24 +46,33 @@
         android:text="login"/>
     <View
         android:layout_width="match_parent"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_height="2dp"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
         android:background="#78000000"/>
 
-    <Button
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/signBTN"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SignUp"
         android:layout_marginTop="8dp"
-        android:background="#827717"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
         android:textColor="#bd000000"
         android:textStyle="bold"
+        android:textSize="20sp"
         android:layout_gravity="center_horizontal"
         android:onClick="signBTN"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#bd000000"
+        android:textStyle="bold"
+        android:layout_gravity="end"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="developed by. XerosLab"/>
 
 
 </LinearLayout>
