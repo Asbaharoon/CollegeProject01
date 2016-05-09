@@ -98,6 +98,19 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     }
 
 
+    public  int updateStudent(String old_roll, String new_roll, String new_name, String new_phn, SQLiteDatabase sqLiteDatabase){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(StudentInfo.NewUserInfo.STUDENT_NAME, new_name);
+        contentValues.put(StudentInfo.NewUserInfo.STUDENT_ROLL, new_roll);
+        contentValues.put(StudentInfo.NewUserInfo.STUDENT_MOB, new_phn);
+        String selection = StudentInfo.NewUserInfo.STUDENT_ROLL + " LIKE ?";
+        String[] selection_args = {old_roll};
+        int count = sqLiteDatabase.update(StudentInfo.NewUserInfo.STUDENT_INFO_TABEL_NAME, contentValues, selection, selection_args);
+
+        return count;
+    }
+
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS "+StudentInfo.NewUserInfo.STUDENT_INFO_TABEL_NAME);

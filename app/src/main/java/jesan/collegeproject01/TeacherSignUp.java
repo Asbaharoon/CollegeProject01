@@ -1,5 +1,6 @@
 package jesan.collegeproject01;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -38,6 +39,8 @@ public class TeacherSignUp extends AppCompatActivity{
         SavePreferences("SEC", teacherSec.getText().toString());
         SavePreferences("SUB", teacherSub.getText().toString());
         Toast.makeText(getApplicationContext(), "Teacher Data Inserted", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
 
     }
 

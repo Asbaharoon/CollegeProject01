@@ -13,7 +13,7 @@ public class FeatureWork extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.featurelayout);
+        setContentView(R.layout.design_feature_work);
     }
 
     public void addStudentBTN(View view){
