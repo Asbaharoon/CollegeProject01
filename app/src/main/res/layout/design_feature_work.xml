@@ -1,0 +1,148 @@
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    android:background="#433e3e3e"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:weightSum="1"
+            android:layout_weight="0.5">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/attendenceBTN"
+                    android:textColor="#bd000000"
+                    android:textStyle="bold"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/button"
+                    android:text="Attendence"
+                    android:textSize="18sp"
+                    android:gravity="center|bottom"
+                    android:singleLine="false"
+                    android:paddingBottom="30dp"
+                    android:paddingRight="10dp"
+                    android:onClick="attendenceBTN"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/addstudent"
+                    android:layout_centerInParent="true"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/addStudentBTN"
+                    android:background="@drawable/button"
+                    android:textColor="#bd000000"
+                    android:textStyle="bold"
+                    android:text="Add Student"
+                    android:textSize="18sp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center|bottom"
+                    android:singleLine="false"
+                    android:paddingBottom="30dp"
+                    android:paddingRight="10dp"
+                    android:onClick="addStudentBTN"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cc"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:weightSum="1"
+            android:layout_weight="0.5">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/reportBTN"
+                    android:background="@drawable/button"
+                    android:textColor="#bd000000"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Report"
+                    android:textSize="18sp"
+                    android:onClick="reportBTN"
+                    android:gravity="center|bottom"
+                    android:paddingBottom="30dp"
+                    android:paddingRight="10dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/report"
+                    android:layout_centerInParent="true"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/searchStudentBTN"
+                    android:textColor="#bd000000"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/button"
+                    android:text="Search"
+                    android:textSize="18sp"
+                    android:onClick="searchStudentBTN"
+                    android:gravity="center|bottom"
+                    android:paddingBottom="30dp"
+                    android:paddingRight="9dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/search"
+                    android:layout_centerInParent="true"/>
+
+
+            </RelativeLayout>
+        </TableRow>
+
+    </TableLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

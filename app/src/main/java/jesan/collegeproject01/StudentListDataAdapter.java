@@ -68,7 +68,7 @@ public class StudentListDataAdapter extends ArrayAdapter {
         settingsActivity = new SettingsActivity();
         if (row == null){
             LayoutInflater layoutInflater = (LayoutInflater) this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            row = layoutInflater.inflate(R.layout.row_list_student_info, parent, false);
+            row = layoutInflater.inflate(R.layout.row_student_info_table, parent, false);
             layoutHandler = new LayoutHandler();
             layoutHandler.nameTV = (TextView) row.findViewById(R.id.nameTV);
             layoutHandler.rollTV = (TextView) row.findViewById(R.id.rollTV);

@@ -30,13 +30,14 @@ public class StudentContactActivity extends Activity {
         ContactMob = (EditText) findViewById(R.id.phnnumET);
 
 
+
     }
 
     public void addContact(View view){
         String name = ContactName.getText().toString();
         String roll = ContactRoll.getText().toString();
         String phnNum = ContactMob.getText().toString();
-
+        name=name.replaceAll(" ", "\n");
         dataBaseHelper = new DataBaseHelper(context);
         sqLiteDatabase = dataBaseHelper.getWritableDatabase();
         dataBaseHelper.addStudentInfo(name, roll, phnNum, sqLiteDatabase);
