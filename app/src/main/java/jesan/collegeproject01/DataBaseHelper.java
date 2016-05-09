@@ -81,6 +81,14 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     }
 
 
+    public void deleteStudentReport(SQLiteDatabase sqLiteDatabase){
+        //String[] projection = {StudentReport.StudentReportData.STUDENT_NAME, StudentReport.StudentReportData.STUDENT_IDS, StudentReport.StudentReportData.CURRENT_DATE, StudentReport.StudentReportData.STUDENT_VERDICT };
+
+        sqLiteDatabase.delete(StudentReport.StudentReportData.STUDENT_REPORT_TABEL_NAME, null, null);
+
+    }
+
+
     public Cursor getContact(String roll, SQLiteDatabase sqLiteDatabase){
         String[] projection = {StudentInfo.NewUserInfo.STUDENT_NAME, StudentInfo.NewUserInfo.STUDENT_MOB};
         String selection = StudentInfo.NewUserInfo.STUDENT_ROLL +" LIKE ?";

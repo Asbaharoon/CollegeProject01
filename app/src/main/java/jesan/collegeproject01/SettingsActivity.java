@@ -24,7 +24,9 @@ public class SettingsActivity extends AppCompatActivity {
 
     Switch absentSwitch, presentSwitch;
 
-    DataBaseHelper sampleDB;
+
+    SQLiteDatabase sqLiteDatabase;
+    DataBaseHelper dataBaseHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,16 +93,23 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
 
+    public void reportDelete(View view){
+        dataBaseHelper = new DataBaseHelper(getApplicationContext());
+        sqLiteDatabase = dataBaseHelper.getWritableDatabase();
+        dataBaseHelper.deleteStudentReport(sqLiteDatabase);
+        Toast.makeText(getApplicationContext(), "All Data Deleted", Toast.LENGTH_SHORT).show();
+    }
+
     public void downCSV(View view){
         exportCSV();
     }
 
 
     public void exportCSV() {
-        sampleDB = new DataBaseHelper(getApplicationContext());
+        dataBaseHelper = new DataBaseHelper(getApplicationContext());
 
 
-        File dbFile = getDatabasePath(sampleDB.getDBname());
+        File dbFile = getDatabasePath(dataBaseHelper.getDBname());
         DataBaseHelper dbhelper = new DataBaseHelper(getApplicationContext());
         File exportDir = new File(Environment.getExternalStorageDirectory(), "");
         if (!exportDir.exists()) {

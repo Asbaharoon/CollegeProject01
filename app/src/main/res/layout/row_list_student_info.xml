@@ -14,7 +14,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:text="name"/>
         <TextView
             android:layout_marginLeft="95dp"
@@ -25,30 +25,30 @@
             android:text="roll"/>
         <TextView
             android:id="@+id/numberTV"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
 
-    <Button
+    <TextView
         android:id="@+id/present"
-        android:text="Present"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#827717"
-        android:textColor="#bd000000"
+        android:text="P"
+        android:textSize="22sp"
         android:textStyle="bold"
+        android:textColor="#bd000000"
         android:onClick="presentBTN"/>
-    <Button
+    <TextView
         android:id="@+id/absent"
-        android:text="Absent"
+        android:text="A"
         android:layout_marginLeft="4dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#827717"
         android:textColor="#bd000000"
+        android:textSize="22sp"
         android:textStyle="bold"
         android:onClick="absentBTN" />
 

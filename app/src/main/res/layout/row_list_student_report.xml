@@ -9,6 +9,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:layout_marginLeft="8dp"
         android:text="name"/>
 
     <TextView
@@ -16,12 +17,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:paddingLeft="12dp"
         android:text="roll"/>
     <TextView
-        android:layout_marginLeft="95dp"
         android:id="@+id/dateTV"
         android:layout_width="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
+        android:paddingRight="8dp"
         android:layout_height="wrap_content"
         android:text="date"/>
     <TextView

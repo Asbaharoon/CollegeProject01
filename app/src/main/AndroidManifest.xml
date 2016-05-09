@@ -21,9 +21,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".StudentContactActivity"
-            android:label="Add Student"/>
+            android:label="Add Info"/>
         <activity android:name=".StudentDataListActivity"
-            android:label="Show"/>
+            android:label="Attendence"/>
        <activity android:name=".FeatureWork"
            android:label="Logged In"/>
         <activity android:name=".TeacherSignUp"

@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,8 +35,7 @@ public class StudentListDataAdapter extends ArrayAdapter {
     }
 
     static class LayoutHandler{
-        TextView nameTV, rollTV, numberTV;
-        Button presentBTN, absentBTN;
+        TextView presentBTN, nameTV, rollTV, numberTV, absentBTN;
     }
 
     @Override
@@ -75,8 +73,8 @@ public class StudentListDataAdapter extends ArrayAdapter {
             layoutHandler.nameTV = (TextView) row.findViewById(R.id.nameTV);
             layoutHandler.rollTV = (TextView) row.findViewById(R.id.rollTV);
             layoutHandler.numberTV = (TextView) row.findViewById(R.id.numberTV);
-            layoutHandler.presentBTN = (Button) row.findViewById(R.id.present);
-            layoutHandler.absentBTN = (Button) row.findViewById(R.id.absent);
+            layoutHandler.presentBTN = (TextView) row.findViewById(R.id.present);
+            layoutHandler.absentBTN = (TextView) row.findViewById(R.id.absent);
             row.setTag(layoutHandler);
 
 
@@ -100,7 +98,7 @@ public class StudentListDataAdapter extends ArrayAdapter {
             public void onClick(View v) {
 
                 if (sharedPreferences.getBoolean("PresentSMSon", false)){
-                    //sendMsg(studentDataProvider.getMob(), "Present Today");
+                    sendMsg(studentDataProvider.getMob(), studentDataProvider.getName()+", attend today's class.");
                     Toast.makeText(getContext(),"MESSEGE SEND", Toast.LENGTH_SHORT).show();
                 }
 
