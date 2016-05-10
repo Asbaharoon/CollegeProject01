@@ -1,0 +1,95 @@
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.30">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.30"
+                    android:id="@+id/nameTV"
+                    android:layout_marginLeft="4dp"
+                    android:text="name"
+                    android:textSize="18sp"
+                    android:lines="4"
+                    android:singleLine="false"
+                    android:maxLines="6"
+                    android:textColor="#000"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rollTV"
+                    android:textColor="#000"
+                    android:text="roll" />
+                <TextView
+                    android:id="@+id/numberTV"
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.12">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.12"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/present"
+                    android:textSize="22sp"
+                    android:textColor="#039b1a"
+                    android:onClick="presentBTN"
+                    android:textStyle="bold"
+                    android:text="P" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.12">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.12"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/absent"
+                    android:textSize="22sp"
+                    android:textColor="#e86837"
+                    android:textStyle="bold"
+                    android:onClick="absentBTN"
+                    android:text="A" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+
+
+
+
+
+    </TableLayout>
+
+</LinearLayout>
